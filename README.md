@@ -76,70 +76,71 @@ This project includes comprehensive tests using Foundry:
 
 ### Run Tests
 
-bash
+```bash
 forge test
 forge test -vvv
+```
 
 ---
 
 ##🚀 Deployment
-
+```
 Start Local Node
 anvil
 
 Deploy Contract
 forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
-
+```
 ---
 
 ##🔁 Interacting with Contract
-
+```
 Fund Contract
 forge script script/FundFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 
 Withdraw Funds
 forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
-
+```
 ---
 
 ##🔐 Environment Variables
-
+```
 Create a .env file:
 
 PRIVATE_KEY=your_private_key
 RPC_URL=your_rpc_url
-
+```
 ---
 
 ##📊 Gas Optimization
-
+```
 Uses memory caching for funders
 Minimizes storage reads/writes
 Efficient withdrawal pattern
-
+```
 ---
 
 ##⚠️ Security Notes
-
+```
 Only owner can withdraw funds
 Price feed dependency must be correct per network
 Not audited — for educational purposes
-
+```
 ---
 
 ##🛣️ Future Improvements
 
-🔹 Add frontend (React + Ethers.js)
-🔹 Support multiple tokens (ERC20 funding)
-🔹 Add events & indexing for analytics
-🔹 Upgradeable contract support
+-🔹 Add frontend (React + Ethers.js)
+-🔹 Support multiple tokens (ERC20 funding)
+-🔹 Add events & indexing for analytics
+-🔹 Upgradeable contract support
 
 ---
 
 ##🙌 Acknowledgements
 
-Inspired by Web3 development practices
-Built using Foundry toolkit
+Inspired by Web3 development practices.
+Built using Foundry toolkit.
 
 ---
 
