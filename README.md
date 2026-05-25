@@ -18,11 +18,13 @@ The contract owner can withdraw all funds, and multiple contributors are tracked
 ✅ Gas-optimized withdrawal logic
 ✅ Full unit & integration testing
 ✅ Scripted deployment & interaction
+
 🧱 Tech Stack
 Solidity ^0.8.x
 Foundry (Forge, Cast, Anvil)
 Chainlink Price Feeds
 Git & GitHub
+
 📂 Project Structure
 foundry-fundme/
 ├── src/
@@ -38,16 +40,16 @@ foundry-fundme/
 ├── lib/
 ├── foundry.toml
 └── README.md
+
 ⚙️ How It Works
 Users call fund() and send ETH
 ETH value is converted to USD using a price feed
 Transaction is accepted only if it meets the minimum threshold
 Funders are recorded in a mapping
 Owner can call withdraw() to collect all funds
+
 🧪 Testing
-
 This project includes comprehensive tests using Foundry:
-
 ✅ Unit tests for core logic
 ✅ Integration tests for scripts
 ✅ Multiple funders scenario
@@ -56,38 +58,44 @@ Run Tests
 forge test
 Run Tests with Verbose Output
 forge test -vvv
+
 🚀 Deployment
 Start Local Node
 anvil
 Deploy Contract
 forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+
 🔁 Interacting with Contract
 Fund Contract
 forge script script/FundFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 Withdraw Funds
-forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcas
+
 🔐 Environment Variables
-
 Create a .env file:
-
 PRIVATE_KEY=your_private_key
 RPC_URL=your_rpc_url
+
 📊 Gas Optimization
 Uses memory caching for funders
 Minimizes storage reads/writes
 Efficient withdrawal pattern
+
 ⚠️ Security Notes
 Only owner can withdraw funds
 Price feed dependency must be correct per network
 Not audited — for educational purposes
+
 🛣️ Future Improvements
 🔹 Add frontend (React + Ethers.js)
 🔹 Support multiple tokens (ERC20 funding)
 🔹 Add events & indexing for analytics
 🔹 Upgradeable contract support
+
 🙌 Acknowledgements
 Inspired by Web3 development practices
 Built using Foundry toolkit
+
 📄 License
 
 MIT License
