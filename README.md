@@ -83,6 +83,7 @@ forge test -vvv
 ---
 
 ##🚀 Deployment
+
 Start Local Node
 anvil
 
@@ -92,6 +93,7 @@ forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVAT
 ---
 
 ##🔁 Interacting with Contract
+
 Fund Contract
 forge script script/FundFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 
@@ -110,6 +112,7 @@ RPC_URL=your_rpc_url
 ---
 
 ##📊 Gas Optimization
+
 Uses memory caching for funders
 Minimizes storage reads/writes
 Efficient withdrawal pattern
@@ -117,6 +120,7 @@ Efficient withdrawal pattern
 ---
 
 ##⚠️ Security Notes
+
 Only owner can withdraw funds
 Price feed dependency must be correct per network
 Not audited — for educational purposes
@@ -124,6 +128,7 @@ Not audited — for educational purposes
 ---
 
 ##🛣️ Future Improvements
+
 🔹 Add frontend (React + Ethers.js)
 🔹 Support multiple tokens (ERC20 funding)
 🔹 Add events & indexing for analytics
