@@ -35,18 +35,17 @@ The contract owner can withdraw all funds, and multiple contributors are tracked
 
 ---
 
-## 📂 Project Structure
-foundry-fundme/
+##foundry-fundme/
 ├── src/
-│ └── FundMe.sol
+│   └── FundMe.sol
 ├── script/
-│ ├── DeployFundMe.s.sol
-│ ├── FundFundMe.s.sol
-│ └── WithdrawFundMe.s.sol
+│   ├── DeployFundMe.s.sol
+│   ├── FundFundMe.s.sol
+│   └── WithdrawFundMe.s.sol
 ├── test/
-│ ├── FundMeTest.t.sol
-│ └── Integration/
-│ └── Interaction.t.sol
+│   ├── FundMeTest.t.sol
+│   └── Integration/
+│       └── Interaction.t.sol
 ├── lib/
 ├── foundry.toml
 └── README.md
