@@ -35,7 +35,7 @@ The contract owner can withdraw all funds, and multiple contributors are tracked
 
 ---
 
-##📂 Project Structure
+## 📂 Project Structure
 
 ```
 foundry-fundme/
@@ -83,7 +83,7 @@ forge test -vvv
 
 ---
 
-##🚀 Deployment
+## 🚀 Deployment
 
 Start Local Node
 ```
@@ -96,7 +96,7 @@ forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVAT
 ```
 ---
 
-##🔁 Interacting with Contract
+## 🔁 Interacting with Contract
 
 Fund Contract
 ```
@@ -108,7 +108,7 @@ forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIV
 ```
 ---
 
-##🔐 Environment Variables
+## 🔐 Environment Variables
 
 - Create a .env file:
 ```
@@ -117,7 +117,7 @@ RPC_URL=your_rpc_url
 ```
 ---
 
-##📊 Gas Optimization
+## 📊 Gas Optimization
 
 - Uses memory caching for funders
 - Minimizes storage reads/writes
@@ -125,7 +125,7 @@ RPC_URL=your_rpc_url
 
 ---
 
-##⚠️ Security Notes
+## ⚠️ Security Notes
 
 - Only owner can withdraw funds
 - Price feed dependency must be correct per network
@@ -133,7 +133,7 @@ RPC_URL=your_rpc_url
 
 ---
 
-##🛣️ Future Improvements
+## 🛣️ Future Improvements
 
 - 🔹 Add frontend (React + Ethers.js)
 - 🔹 Support multiple tokens (ERC20 funding)
@@ -142,15 +142,14 @@ RPC_URL=your_rpc_url
 
 ---
 
-##🙌 Acknowledgements
+## 🙌 Acknowledgements
 
--Inspired by Web3 development practices
-
--Built using Foundry toolkit
+- Inspired by Web3 development practices
+- Built using Foundry toolkit
 
 ---
 
-##📄 License
+## 📄 License
 
 MIT License
 
