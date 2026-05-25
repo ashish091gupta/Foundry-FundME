@@ -35,7 +35,9 @@ The contract owner can withdraw all funds, and multiple contributors are tracked
 
 ---
 
-##foundry-fundme/
+##📂 Project Structure
+
+foundry-fundme/
 ├── src/
 │   └── FundMe.sol
 ├── script/
