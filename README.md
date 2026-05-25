@@ -1,66 +1,93 @@
 ## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+💰 Foundry FundMe
 
-Foundry consists of:
+A minimal and secure crowdfunding smart contract built using Solidity and Foundry, allowing users to fund ETH with a minimum USD value enforced via price feeds.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+📌 Overview
 
-## Documentation
+FundMe is a smart contract that enables users to send ETH to the contract while ensuring a minimum contribution value in USD using decentralized price feeds.
 
-https://book.getfoundry.sh/
+The contract owner can withdraw all funds, and multiple contributors are tracked efficiently.
 
-## Usage
+🚀 Features
+✅ Minimum funding amount enforced in USD
+✅ Integration with price feeds (e.g., Chainlink)
+✅ Tracks all funders
+✅ Owner-only withdrawal
+✅ Gas-optimized withdrawal logic
+✅ Full unit & integration testing
+✅ Scripted deployment & interaction
+🧱 Tech Stack
+Solidity ^0.8.x
+Foundry (Forge, Cast, Anvil)
+Chainlink Price Feeds
+Git & GitHub
+📂 Project Structure
+foundry-fundme/
+├── src/
+│   └── FundMe.sol
+├── script/
+│   ├── DeployFundMe.s.sol
+│   ├── FundFundMe.s.sol
+│   └── WithdrawFundMe.s.sol
+├── test/
+│   ├── FundMeTest.t.sol
+│   └── Integration/
+│       └── Interaction.t.sol
+├── lib/
+├── foundry.toml
+└── README.md
+⚙️ How It Works
+Users call fund() and send ETH
+ETH value is converted to USD using a price feed
+Transaction is accepted only if it meets the minimum threshold
+Funders are recorded in a mapping
+Owner can call withdraw() to collect all funds
+🧪 Testing
 
-### Build
+This project includes comprehensive tests using Foundry:
 
-```shell
-$ forge build
-```
+✅ Unit tests for core logic
+✅ Integration tests for scripts
+✅ Multiple funders scenario
+✅ Withdrawal edge cases
+Run Tests
+forge test
+Run Tests with Verbose Output
+forge test -vvv
+🚀 Deployment
+Start Local Node
+anvil
+Deploy Contract
+forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+🔁 Interacting with Contract
+Fund Contract
+forge script script/FundFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+Withdraw Funds
+forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+🔐 Environment Variables
 
-### Test
+Create a .env file:
 
-```shell
-$ forge test
-```
+PRIVATE_KEY=your_private_key
+RPC_URL=your_rpc_url
+📊 Gas Optimization
+Uses memory caching for funders
+Minimizes storage reads/writes
+Efficient withdrawal pattern
+⚠️ Security Notes
+Only owner can withdraw funds
+Price feed dependency must be correct per network
+Not audited — for educational purposes
+🛣️ Future Improvements
+🔹 Add frontend (React + Ethers.js)
+🔹 Support multiple tokens (ERC20 funding)
+🔹 Add events & indexing for analytics
+🔹 Upgradeable contract support
+🙌 Acknowledgements
+Inspired by Web3 development practices
+Built using Foundry toolkit
+📄 License
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+MIT License
