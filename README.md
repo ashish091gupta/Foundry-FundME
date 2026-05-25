@@ -130,17 +130,18 @@ Not audited — for educational purposes
 
 ##🛣️ Future Improvements
 
--🔹 Add frontend (React + Ethers.js)
--🔹 Support multiple tokens (ERC20 funding)
--🔹 Add events & indexing for analytics
--🔹 Upgradeable contract support
+*🔹 Add frontend (React + Ethers.js)
+*🔹 Support multiple tokens (ERC20 funding)
+*🔹 Add events & indexing for analytics
+*🔹 Upgradeable contract support
 
 ---
 
 ##🙌 Acknowledgements
 
-Inspired by Web3 development practices.
-Built using Foundry toolkit.
+Inspired by Web3 development practices
+
+Built using Foundry toolkit
 
 ---
 
