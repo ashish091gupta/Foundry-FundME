@@ -1,101 +1,148 @@
 ## Foundry
 
-💰 Foundry FundMe
+# 💰 Foundry FundMe
 
 A minimal and secure crowdfunding smart contract built using Solidity and Foundry, allowing users to fund ETH with a minimum USD value enforced via price feeds.
 
-📌 Overview
+---
+
+## 📌 Overview
 
 FundMe is a smart contract that enables users to send ETH to the contract while ensuring a minimum contribution value in USD using decentralized price feeds.
 
 The contract owner can withdraw all funds, and multiple contributors are tracked efficiently.
 
-🚀 Features
-✅ Minimum funding amount enforced in USD
-✅ Integration with price feeds (e.g., Chainlink)
-✅ Tracks all funders
-✅ Owner-only withdrawal
-✅ Gas-optimized withdrawal logic
-✅ Full unit & integration testing
-✅ Scripted deployment & interaction
+---
 
-🧱 Tech Stack
-Solidity ^0.8.x
-Foundry (Forge, Cast, Anvil)
-Chainlink Price Feeds
-Git & GitHub
+## 🚀 Features
 
-📂 Project Structure
+- ✅ Minimum funding amount enforced in USD  
+- ✅ Integration with price feeds (e.g., Chainlink)  
+- ✅ Tracks all funders  
+- ✅ Owner-only withdrawal  
+- ✅ Gas-optimized withdrawal logic  
+- ✅ Full unit & integration testing  
+- ✅ Scripted deployment & interaction  
+
+---
+
+## 🧱 Tech Stack
+
+- Solidity ^0.8.x  
+- Foundry (Forge, Cast, Anvil)  
+- Chainlink Price Feeds  
+- Git & GitHub  
+
+---
+
+## 📂 Project Structure
 foundry-fundme/
 ├── src/
-│   └── FundMe.sol
+│ └── FundMe.sol
 ├── script/
-│   ├── DeployFundMe.s.sol
-│   ├── FundFundMe.s.sol
-│   └── WithdrawFundMe.s.sol
+│ ├── DeployFundMe.s.sol
+│ ├── FundFundMe.s.sol
+│ └── WithdrawFundMe.s.sol
 ├── test/
-│   ├── FundMeTest.t.sol
-│   └── Integration/
-│       └── Interaction.t.sol
+│ ├── FundMeTest.t.sol
+│ └── Integration/
+│ └── Interaction.t.sol
 ├── lib/
 ├── foundry.toml
 └── README.md
 
-⚙️ How It Works
-Users call fund() and send ETH
-ETH value is converted to USD using a price feed
-Transaction is accepted only if it meets the minimum threshold
-Funders are recorded in a mapping
-Owner can call withdraw() to collect all funds
+---
 
-🧪 Testing
+## ⚙️ How It Works
+
+1. Users call `fund()` and send ETH  
+2. ETH value is converted to USD using a price feed  
+3. Transaction is accepted only if it meets the minimum threshold  
+4. Funders are recorded in a mapping  
+5. Owner can call `withdraw()` to collect all funds  
+
+---
+
+## 🧪 Testing
+
 This project includes comprehensive tests using Foundry:
-✅ Unit tests for core logic
-✅ Integration tests for scripts
-✅ Multiple funders scenario
-✅ Withdrawal edge cases
-Run Tests
+
+- ✅ Unit tests for core logic  
+- ✅ Integration tests for scripts  
+- ✅ Multiple funders scenario  
+- ✅ Withdrawal edge cases  
+
+### Run Tests
+
+bash
 forge test
-Run Tests with Verbose Output
 forge test -vvv
 
-🚀 Deployment
+---
+
+##🚀 Deployment
 Start Local Node
 anvil
+
 Deploy Contract
 forge script script/DeployFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 
-🔁 Interacting with Contract
+---
+
+##🔁 Interacting with Contract
 Fund Contract
 forge script script/FundFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
-Withdraw Funds
-forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcas
 
-🔐 Environment Variables
+Withdraw Funds
+forge script script/WithdrawFundMe.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+
+---
+
+##🔐 Environment Variables
+
 Create a .env file:
+
 PRIVATE_KEY=your_private_key
 RPC_URL=your_rpc_url
 
-📊 Gas Optimization
+---
+
+##📊 Gas Optimization
 Uses memory caching for funders
 Minimizes storage reads/writes
 Efficient withdrawal pattern
 
-⚠️ Security Notes
+---
+
+##⚠️ Security Notes
 Only owner can withdraw funds
 Price feed dependency must be correct per network
 Not audited — for educational purposes
 
-🛣️ Future Improvements
+---
+
+##🛣️ Future Improvements
 🔹 Add frontend (React + Ethers.js)
 🔹 Support multiple tokens (ERC20 funding)
 🔹 Add events & indexing for analytics
 🔹 Upgradeable contract support
 
-🙌 Acknowledgements
+---
+
+##🙌 Acknowledgements
+
 Inspired by Web3 development practices
 Built using Foundry toolkit
 
-📄 License
+---
+
+##📄 License
 
 MIT License
+
+
+
+
+
+
+
